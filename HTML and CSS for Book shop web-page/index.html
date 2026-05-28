@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Книжный Магазин</h1>
+
+<!-- Авторизация -->
+<div class="block">
+    <h2>Вход</h2>
+
+    <input type="text" id="username" placeholder="Логин">
+    
+    <select id="role">
+        <option value="user">Пользователь</option>
+        <option value="admin">Администратор</option>
+    </select>
+
+    <button onclick="login()">Войти</button>
+</div>
+
+<!-- Фильтрация -->
+<div class="block user-panel">
+    <h2>Поиск и сортировка</h2>
+
+    <input type="text" id="searchAuthor" placeholder="Автор">
+
+    <select id="categoryFilter">
+        <option value="">Все категории</option>
+        <option value="Фантастика">Фантастика</option>
+        <option value="Роман">Роман</option>
+        <option value="Детектив">Детектив</option>
+    </select>
+
+    <input type="number" id="yearFilter" placeholder="Год">
+
+    <button onclick="filterBooks()">Найти</button>
+</div>
+
+<!-- Список книг -->
+<div class="block">
+    <h2>Библиотека</h2>
+
+    <div id="books"></div>
+</div>
+
+<!-- Панель администратора -->
+<div class="block admin-panel">
+    <h2>Панель администратора</h2>
+
+    <input type="text" id="bookTitle" placeholder="Название">
+
+    <input type="text" id="bookAuthor" placeholder="Автор">
+
+    <input type="text" id="bookCategory" placeholder="Категория">
+
+    <input type="number" id="bookYear" placeholder="Год">
+
+    <input type="number" id="bookPrice" placeholder="Цена">
+
+    <button onclick="addBook()">Добавить книгу</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
