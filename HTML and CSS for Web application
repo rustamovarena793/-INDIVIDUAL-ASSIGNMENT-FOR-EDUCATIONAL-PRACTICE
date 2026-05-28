@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Мини Блог</h1>
+
+<!-- Регистрация -->
+<div class="block">
+    <h2>Регистрация</h2>
+    <input type="text" id="registerUsername" placeholder="Логин">
+    <input type="password" id="registerPassword" placeholder="Пароль">
+    <button onclick="register()">Зарегистрироваться</button>
+</div>
+
+<!-- Авторизация -->
+<div class="block">
+    <h2>Вход</h2>
+    <input type="text" id="loginUsername" placeholder="Логин">
+    <input type="password" id="loginPassword" placeholder="Пароль">
+    <button onclick="login()">Войти</button>
+</div>
+
+<!-- Создание поста -->
+<div class="block">
+    <h2>Создать пост</h2>
+    <input type="text" id="postTitle" placeholder="Заголовок">
+    <textarea id="postContent" placeholder="Текст поста"></textarea>
+    <input type="text" id="postTags" placeholder="Теги через запятую">
+    
+    <select id="postVisibility">
+        <option value="public">Публичный</option>
+        <option value="private">Скрытый</option>
+    </select>
+
+    <button onclick="createPost()">Опубликовать</button>
+</div>
+
+<!-- Подписки -->
+<div class="block">
+    <h2>Подписка</h2>
+    <input type="text" id="subscribeUser" placeholder="Имя пользователя">
+    <button onclick="subscribe()">Подписаться</button>
+</div>
+
+<!-- Лента -->
+<div class="block">
+    <h2>Лента постов</h2>
+    <button onclick="showPosts()">Показать посты</button>
+    <div id="posts"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
