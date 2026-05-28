@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник путешествий</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Дневник путешествий</h1>
+
+<!-- Регистрация пользователя -->
+<div class="block">
+    <h2>Регистрация</h2>
+
+    <input type="text" id="username" placeholder="Введите имя">
+
+    <button onclick="registerUser()">
+        Войти
+    </button>
+</div>
+
+<!-- Создание путешествия -->
+<div class="block">
+    <h2>Добавить путешествие</h2>
+
+    <input type="text" id="place" placeholder="Место путешествия">
+
+    <input type="text" id="geo" placeholder="Геопозиция">
+
+    <input type="number" id="cost" placeholder="Стоимость">
+
+    <input type="text" id="heritage" placeholder="Культурные места">
+
+    <textarea id="description" placeholder="Описание"></textarea>
+
+    <input type="text" id="image" placeholder="Ссылка на изображение">
+
+    <button onclick="addTravel()">
+        Добавить путешествие
+    </button>
+</div>
+
+<!-- Список путешествий -->
+<div class="block">
+    <h2>Путешествия пользователей</h2>
+
+    <div id="travels"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
